@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Detector</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .radio-group {
+            display: flex;
+            }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        /* Form Styles */
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Health Information</h1>
+        <form action="display.html" method="post" enctype="multipart/form-data">
+            <label for="name">First name:</label>
+            <input type="text" id="name" name="name" required><!--name-->
+
+            <label for="age">Last name:</label>
+            <input type="text" id="age" name="age" required>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><!--age-->
+
+            <div class="radio-group">
+            <label>Blood Type:</label>
+            <label for="blood-type-a">A </label>
+            <input type="radio" id="blood-type-a" name="blood_type" value="A"><!--blood type-->
+            
+            <label for="blood-type-b">B</label>
+            <input type="radio" id="blood-type-b" name="blood_type" value="B">
+            
+            <label for="blood-type-ab">AB</label>
+            <input type="radio" id="blood-type-ab" name="blood_type" value="AB">
+            
+            <label for="blood-type-o">O</label>
+            <input type="radio" id="blood-type-o" name="blood_type" value="O">
+            <br>
+            </div>
+
+
+            <label>Allgeries:</label>
+            <br>
+            <label for="blood-type-a">Food allergies</label><!--allegeries-->
+            <input type="checkbox" id="blood-type-a" name="blood_type" value="A">
+            
+            <label for="blood-type-b">Drug or Medicinal allergies</label>
+            <input type="checkbox" id="blood-type-b" name="blood_type" value="B">
+            
+            <label for="blood-type-ab">Environment allergies</label>
+            <input type="checkbox" id="blood-type-ab" name="blood_type" value="AB">
+            
+            <label for="blood-type-o">Insect or Animal allergies</label>
+            <input type="checkbox" id="blood-type-o" name="blood_type" value="O" >
+
+            <label for="blood-type-o">Others</label>
+            <input type="checkbox" id="blood-type-o" name="blood_type" value="O" >
+        
+
+
+            <label for="age">Any other medical conditions to specify(optional):</label>
+            <input type="text" id="age" name="age" ><!--yet-->
+
+            <label for="report">Upload medical records:</label>
+            <input type="file" id="report" name="report" >
+
+            <label for="report">Upload Gene sequence Test report:</label>
+            <input type="file" id="report" name="report" >
+
+
+            <label for="report">Upload Blood Test report:</label>
+            <input type="file" id="report" name="report" >
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

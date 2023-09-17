@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        /* Chart Styles */
+        canvas {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+
+        /* Medical Condition List */
+        ul.medical-conditions {
+            list-style: none;
+            padding: 0;
+        }
+
+        li.condition {
+            margin-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li.condition h2 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Condition and Status</h1>
+        <canvas id="chart"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Example data for the line chart
+            var ctx = document.getElementById('chart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                    datasets: [
+                        {
+                            label: 'Cholestrol',
+                            data: [100, 120, 118, 130, 110],
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            fill: false
+                        },
+                        {
+                            label: 'Blood pressure',
+                            data: [100, 80, 110, 90, 118],
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2,
+                            fill: false
+                        },
+                        {
+                            label: 'blood sugar level',
+                            data: [90, 100, 135, 140, 138],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        
+        <h2>Medical Conditions</h2>
+        <ul class="medical-conditions">
+            <li class="condition">
+                <h2>Hypertension</h2>
+                <p>High blood pressure condition.</p>
+            </li>
+            <li class="condition">
+                <h2>Diabetes</h2>
+                <p>Chronic metabolic disease characterized by high blood sugar.</p>
+
+            </li>
+            <li class="condition">
+                <h2>Hypotrophic Cardiomyopathy</h2>
+                <p>Thickenning and overgrowth of Heart tissues </p>
+
+
+                <li class="condition">
+                    <h2> Presence of Gene Varient -DMD </h2>
+                    <p>This causes Muscular dystrophy , which causes progressive muscle weakness</p>
+            <!-- Add more medical conditions here -->
+        </ul>
+    </div>
+
+    
+</body>
+</html>
